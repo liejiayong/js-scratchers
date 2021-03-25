@@ -1,0 +1,43 @@
+{
+  "name": "scratchers",
+  "version": "0.7.0",
+  "main": "dist/scratchers.cjs.js",
+  "module": "dist/scratchers.esm.js",
+  "browser": "dist/scratchers.umd.js",
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "eslint": "^6.8.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.29.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build",
+    "buildWindow": "set NODE_ENV=production && rollup -c",
+    "buildUnix": "NODE_ENV=production rollup -c ./rollup.config.js"
+  },
+  "author": "liejy",
+  "homepage": "",
+  "keywords": [
+    "tools",
+    "javascript",
+    "library"
+  ],
+  "files": [
+    "dist"
+  ]
+}

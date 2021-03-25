@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>刮刮卡</title>
+</head>
+
+<body>
+	<style>
+		.card {
+			position: relative;
+			margin: 500px auto;
+			border: 1px solid #000;
+			width: 375px;
+			height: 140px;
+		}
+	</style>
+	<p>dfffsdf</p>
+	<p>dfffsdf</p>
+	<p>dfffsdf</p>
+	<p>dfffsdf</p>
+	<p>dfffsdf</p>
+	<p>dfffsdf</p>
+	<div class="card"> </div>
+	<button>再来一次</button>
+</body>
+
+<script src="../src/simulateTouch.js"></script>
+<script src="../src/scraping.js"></script>
+<script>
+	var card = document.querySelector('.card')
+	var scraping = new Scratchers(card, {
+		coverColor: '#eff7ff',
+		width: 375,
+		height: 140,
+		// coverImg: './scratch-2x.jpg',
+		// mode: 'sector',
+		doneCallback: function () {
+			// scraping.setCover('./scratch-2x.jpg')
+			console.log('end')
+			scraping.setLock(true)
+		}
+	})
+	console.log(Scratchers, scraping)
+
+	scraping.setLock(false)
+	scraping.setAward({ url: './award.jpg' })
+	// scraping.setAward({ msg: '一等奖', url: './award.jpg' })
+	// scraping.setCover('./scratch-2x.jpg')
+	// // setInterval(() => {
+
+	// // }, 2000);
+	// console.log(scraping)
+	// document.querySelector('button').addEventListener('click', function () {
+	// 	scraping.reset()
+	// });
+</script>
+
+</html>

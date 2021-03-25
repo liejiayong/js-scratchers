@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>刮刮卡</title>
+	</head>
+
+	<body>
+		<style>
+			.card {
+				position: relative;
+				margin: 100px auto;
+				border: 1px solid #000;
+				width: 375px;
+				height: 140px;
+			}
+		</style>
+		<p>dfffsdf</p>
+		<p>dfffsdf</p>
+		<p>dfffsdf</p>
+		<p>dfffsdf</p>
+		<p>dfffsdf</p>
+		<p>dfffsdf</p>
+		<div class="card"></div>
+		<button id="btnAgain">再来一次</button>
+		<button id="btnStart">点击刮卡</button>
+	</body>
+
+	<script src="../scratchers.umd.js"></script>
+	<script>
+		var scraping = new Scratchers(document.querySelector('.card'), {
+			coverColor: '#eff7ff',
+			width: 375,
+			height: 140,
+			coverImg: './scratch-2x.jpg',
+			mode: 'sector',
+			onReady: function() {
+				console.log('ready')
+			},
+			onProgress: function(rate) {
+				console.log('progress:', rate)
+			},
+			onSuccess: function() {}
+		})
+
+		document.querySelector('#btnAgain').addEventListener('click', function() {
+			// scraping.setCover('./scratch-2x.jpg')
+			// scraping.setAward({ url: './award.jpg' })
+			scraping.set({
+				coverUrl: 'https://img.zcool.cn/community/01dbd25e8c7128a801216518adf279.jpg@1280w_1l_2o_100sh.jpg',
+				awardUrl: 'https://img.zcool.cn/community/01f9485e8af38da801216518361916.jpg@260w_195h_1c_1e_1o_100sh.jpg',
+				msg: '特等奖'
+			})
+		})
+		document.querySelector('#btnStart').addEventListener('click', function() {
+			scraping.setLock(false)
+		})
+	</script>
+</html>

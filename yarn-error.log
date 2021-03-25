@@ -1,0 +1,73 @@
+Arguments: 
+  E:\Program Files\nodejs\node.exe E:\Program Files (x86)\Yarn\bin\yarn.js build
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk-11.0.6\bin;C:\Program Files\MongoDB\Server\4.1\bin;E:\Program Files\mysql-5.7.25-winx64\bin;E:\Program Files\python-3.7.2;E:\Program Files (x86)\Yarn\bin\;E:\Program Files\PuTTY\;D:\Program Files\TortoiseSVN\bin;E:\nvm;E:\Program Files\nodejs;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;e:\Program Files\Git\cmd;E:\Program Files\Microsoft VS Code Insiders\bin;E:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Programs\EmEditor;E:\Program Files (x86)\WebStorm 183.4588.47\bin;C:\Users\Administrator\AppData\Local\Yarn\bin;E:\Program Files (x86)\Fiddler;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;E:\nvm;E:\Program Files\nodejs
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\tanwan-file\tool-library\automation-deployment\rollup\rollup-plugin-v1\package.json: Unexpected token } in JSON at position 1021
+      at JSON.parse (<anonymous>)
+      at E:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (E:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at E:\Program Files (x86)\Yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "rollup-plugin-v1s",
+    "version": "1.0.0",
+    "main": "dist/how-long-till-lunch.cjs.js",
+    "module": "dist/how-long-till-lunch.esm.js",
+    "browser": "dist/how-long-till-lunch.umd.js",
+    "dependencies": {
+      "core-js": "^3.6.4"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/plugin-transform-runtime": "^7.9.0",
+      "@babel/preset-env": "^7.9.0",
+      "babel-plugin-external-helpers": "^6.22.0",
+      "eslint": "^6.8.0",
+      "rollup-plugin-babel": "^4.4.0",
+      "rollup-plugin-eslint": "^7.0.0",
+      "rollup-plugin-replace": "^2.2.0",
+      "rollup-plugin-terser": "^5.3.0",
+      "rollup-plugin-uglify": "^6.0.4",
+      "@rollup/plugin-commonjs": "^11.0.1",
+      "@rollup/plugin-node-resolve": "^7.0.0",
+      "rollup": "^1.29.0"
+    },
+    "scripts": {
+      "build": "rollup -c",
+      "dev": "rollup -c -w",
+      "test": "node test/test.js",
+      "pretest": "npm run build",
+      "buildWindow": "set NODE_ENV=production && rollup -c",
+      "buildUnix": "NODE_ENV=production rollup -c ./rollup.config.js",
+    },
+    "author": "liejy",
+    "homepage": "",
+    "keywords": [
+      "tools",
+      "javascript",
+      "library"
+    ],
+    "files": [
+      "dist"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
